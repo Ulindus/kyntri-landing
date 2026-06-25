@@ -19,60 +19,91 @@ function AgenticAI() {
       <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
 
         {/* LEFT */}
-        <div>
-          <p className="text-cyan-400 uppercase tracking-[4px] text-sm mb-6">
-            Agentic AI Platform
-          </p>
+<div>
+  <p className="text-cyan-400 uppercase tracking-[6px] text-sm font-medium mb-8">
+    AGENTIC AI
+  </p>
 
-          <h2 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-            Workflows That
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Think For
-            </span>
-            <br />
-            Themselves
-          </h2>
+  <h2 className="text-[56px] lg:text-[78px] font-extrabold leading-[0.95] tracking-[-2px]">
+    Workflows That
+    <br />
 
-          <p className="text-gray-400 text-lg leading-8 max-w-xl mb-10">
-            Most automation just fires triggers. Kyntri's agentic platform
-            deploys AI agents that understand context, choose the next best
-            action, and execute across your existing tools — then learn from
-            every run.
-          </p>
+    <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+      Think For Themselves
+    </span>
+  </h2>
 
-          <div className="space-y-5">
-            <div className="flex items-center gap-4">
-              <CheckCircle2 className="text-cyan-400" />
-              <span>Analyze data automatically</span>
-            </div>
+  <p className="mt-10 text-gray-400 text-[22px] leading-[1.7] max-w-2xl">
+    Most automation just fires triggers. Kyntri's agentic platform
+    deploys AI agents that understand context, choose the next best
+    action, and execute across your existing tools — then learn from
+    every run.
+  </p>
 
-            <div className="flex items-center gap-4">
-              <CheckCircle2 className="text-cyan-400" />
-              <span>Make smart decisions</span>
-            </div>
+  <div className="mt-14 space-y-7">
 
-            <div className="flex items-center gap-4">
-              <CheckCircle2 className="text-cyan-400" />
-              <span>Execute workflows instantly</span>
-            </div>
+    <div className="flex items-start gap-5">
+      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
+        <CheckCircle2 size={18} className="text-cyan-400" />
+      </div>
 
-            <div className="flex items-center gap-4">
-              <CheckCircle2 className="text-cyan-400" />
-              <span>Continuously improve results</span>
-            </div>
-          </div>
+      <p className="text-xl leading-8">
+        <span className="font-bold text-white">
+          Connect any stack.
+        </span>{" "}
+        <span className="text-gray-300">
+          CRMs, databases, internal tools, and third-party APIs in one orchestration layer.
+        </span>
+      </p>
+    </div>
 
-          <div className="flex gap-5 mt-12">
-            <button className="px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-600 transition text-white">
-              Get Started
-            </button>
+    <div className="flex items-start gap-5">
+      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
+        <CheckCircle2 size={18} className="text-cyan-400" />
+      </div>
 
-            <button className="px-8 py-4 rounded-xl border border-white/10 hover:border-cyan-500/50 transition">
-              Watch Demo
-            </button>
-          </div>
-        </div>
+      <p className="text-xl leading-8">
+        <span className="font-bold text-white">
+          Agents that reason.
+        </span>{" "}
+        <span className="text-gray-300">
+          Multi-step decisions, not brittle if-this-then-that rules.
+        </span>
+      </p>
+    </div>
+
+    <div className="flex items-start gap-5">
+      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
+        <CheckCircle2 size={18} className="text-cyan-400" />
+      </div>
+
+      <p className="text-xl leading-8">
+        <span className="font-bold text-white">
+          Human-in-the-loop.
+        </span>{" "}
+        <span className="text-gray-300">
+          Approvals and guardrails exactly where they matter.
+        </span>
+      </p>
+    </div>
+
+    <div className="flex items-start gap-5">
+      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
+        <CheckCircle2 size={18} className="text-cyan-400" />
+      </div>
+
+      <p className="text-xl leading-8">
+        <span className="font-bold text-white">
+          Continuously improving.
+        </span>{" "}
+        <span className="text-gray-300">
+          Every execution sharpens the next.
+        </span>
+      </p>
+    </div>
+
+  </div>
+</div>
         
 
         {/* RIGHT */}
