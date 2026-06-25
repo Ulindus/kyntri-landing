@@ -5,6 +5,7 @@ import MposPage from "./pages/MposPage";
 import EventFlowPage from "./pages/EventFlowPage";
 import GaragePage from "./pages/GaragePage";
 import AgenticAiPage from "./pages/AgenticAiPage";
+import Marquee from "./components/Marquee";
 
 function App() {
   return (

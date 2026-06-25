@@ -7,12 +7,13 @@ import ProductsSection from "../components/ProductsSection";
 import LiftlySection from "../components/LiftlySection";
 import DeliveryJourney from "../components/DeliveryJourney";
 import ContactSection from "../components/ContactSection";
-
+import Marquee from "../components/Marquee";
 function Home() {
   return (
     <>
       <Navbar />
       <Hero />
+      <Marquee />
       <Services />
       <AutomationSection />
       <ProductsSection />
