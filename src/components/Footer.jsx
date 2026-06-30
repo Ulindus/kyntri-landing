@@ -1,101 +1,126 @@
+import logo from "../assets/kyntri_logo.png";
+
 function Footer() {
   return (
-    <footer className="bg-[#010611] border-t border-white/10">
+    <footer className="bg-[#030814] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-20">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+        {/* Top Footer */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
 
           {/* Logo Section */}
-          <div className="lg:col-span-1">
-            <h2 className="text-3xl font-black text-cyan-400">
-              KYNTRI
-            </h2>
+          <div className="lg:col-span-2">
 
-            <p className="text-gray-400 mt-6 leading-7">
+            <div className="flex items-center gap-4 mb-6">
+              <img
+                src={logo}
+                alt="Kyntri"
+                className="h-11 w-auto"
+              />
+
+              <h2 className="text-4xl font-black tracking-[4px] text-white">
+                KYNTRI
+              </h2>
+            </div>
+
+            <p className="text-gray-400 text-lg leading-9 max-w-sm">
               Engineering scalable software,
-              AI solutions and cloud platforms
-              for modern enterprises.
+              AI solutions, and cloud
+              platforms for modern
+              enterprises.
             </p>
+
           </div>
 
           {/* Platforms */}
           <div>
-            <h3 className="font-bold text-lg mb-6">
+            <h3 className="text-2xl font-bold mb-6 text-white">
               Platforms
             </h3>
 
-            <ul className="space-y-3 text-gray-400">
-              <li>mPOS</li>
-              <li>Liftly</li>
-              <li>EventFlow</li>
-              <li>AutoGarage</li>
-              <li>Agentic AI</li>
+            <ul className="space-y-4 text-lg text-gray-400">
+              <li className="hover:text-white transition cursor-pointer">mPOS</li>
+              <li className="hover:text-white transition cursor-pointer">Liftly</li>
+              <li className="hover:text-white transition cursor-pointer">EventFlow</li>
+              <li className="hover:text-white transition cursor-pointer">AutoGarage</li>
+              <li className="hover:text-white transition cursor-pointer">Agentic AI</li>
             </ul>
           </div>
 
           {/* Use Cases */}
           <div>
-            <h3 className="font-bold text-lg mb-6">
+            <h3 className="text-2xl font-bold mb-6 text-white">
               Use Cases
             </h3>
 
-            <ul className="space-y-3 text-gray-400">
-              <li>Workflow Automation</li>
-              <li>AI Assistants</li>
-              <li>Data Analytics</li>
-              <li>Cloud Migration</li>
-              <li>Digital Transformation</li>
+            <ul className="space-y-4 text-lg text-gray-400">
+              <li className="hover:text-white transition cursor-pointer">
+                Workflow Automation
+              </li>
+
+              <li className="hover:text-white transition cursor-pointer">
+                AI Assistants
+              </li>
+
+              <li className="hover:text-white transition cursor-pointer">
+                Data Analytics
+              </li>
+
+              <li className="hover:text-white transition cursor-pointer">
+                Cloud Migration
+              </li>
+
+              <li className="hover:text-white transition cursor-pointer">
+                Digital Transformation
+              </li>
             </ul>
           </div>
 
           {/* Resources */}
           <div>
-            <h3 className="font-bold text-lg mb-6">
+            <h3 className="text-2xl font-bold mb-6 text-white">
               Resources
             </h3>
 
-            <ul className="space-y-3 text-gray-400">
-              <li>Blog</li>
-              <li>Case Studies</li>
-              <li>Documentation</li>
-              <li>Support</li>
-              <li>FAQ</li>
+            <ul className="space-y-4 text-lg text-gray-400">
+              <li className="hover:text-white transition cursor-pointer">Blog</li>
+              <li className="hover:text-white transition cursor-pointer">Case Studies</li>
+              <li className="hover:text-white transition cursor-pointer">Documentation</li>
+              <li className="hover:text-white transition cursor-pointer">Support</li>
+              <li className="hover:text-white transition cursor-pointer">FAQ</li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="font-bold text-lg mb-6">
+            <h3 className="text-2xl font-bold mb-6 text-white">
               Company
             </h3>
 
-            <ul className="space-y-3 text-gray-400">
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Careers</li>
-              <li>Contact</li>
-              <li>Privacy Policy</li>
+            <ul className="space-y-4 text-lg text-gray-400">
+              <li className="hover:text-white transition cursor-pointer">About Us</li>
+              <li className="hover:text-white transition cursor-pointer">Services</li>
+              <li className="hover:text-white transition cursor-pointer">Careers</li>
+              <li className="hover:text-white transition cursor-pointer">Contact</li>
+              <li className="hover:text-white transition cursor-pointer">Privacy Policy</li>
             </ul>
           </div>
 
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 my-10" />
+        <div className="border-t border-white/10 my-14"></div>
 
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 
-          <p className="text-gray-500">
-            © 2026 KYNTRI. All rights reserved.
+          <p className="text-gray-500 text-sm md:text-base">
+            © 2026 Kyntri Technology Solutions. All rights reserved.
           </p>
 
-          <div className="flex gap-6 text-gray-500">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-          </div>
+          <p className="text-gray-500 text-sm md:text-base">
+            Built for modern, intelligent enterprises.
+          </p>
 
         </div>
 

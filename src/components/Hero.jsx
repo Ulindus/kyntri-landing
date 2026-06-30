@@ -107,7 +107,7 @@ function Hero() {
         {/* RIGHT SIDE */}
         <div className="relative w-full h-[650px] flex items-center justify-end pr-10">
           {/* Robot Glow */}
-          <div className="absolute w-[550px] h-[550px] bg-cyan-500/30 blur-[160px] rounded-full" />
+<div className="absolute w-[180px] h-[180px] bg-cyan-400/5 blur-[60px] rounded-full" />
 {/* Floating Particles */}
 
 <div className="particle particle-1" />
@@ -172,7 +172,7 @@ rotateX(${-mousePosition.y * 0.8}deg)
   transition-transform
   duration-500
   ease-out
-  drop-shadow-[0_0_80px_rgba(0,255,255,0.45)]
+ drop-shadow-[0_0_15px_rgba(34,211,238,0.15)]
 "
             />
           </div>
