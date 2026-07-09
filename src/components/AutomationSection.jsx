@@ -1,286 +1,457 @@
-
-import robot from "../assets/agentic-robot.png";
-
 import {
   CheckCircle2,
-  Brain,
+  Play,
+  Search,
+  Link2,
   Zap,
-  Code2,
-  RefreshCw,
-  BarChart3,
 } from "lucide-react";
 
-function AgenticAI() {
+const FEATURES = [
+  {
+    title: "Connect any stack.",
+    desc:
+      "CRMs, databases, internal tools, and third-party APIs in one orchestration layer.",
+  },
+  {
+    title: "Agents that reason.",
+    desc:
+      "Multi-step decisions, not brittle if-this-then-that rules.",
+  },
+  {
+    title: "Human-in-the-loop.",
+    desc:
+      "Approvals and guardrails exactly where they matter.",
+  },
+  {
+    title: "Continuously improving.",
+    desc:
+      "Every execution sharpens the next.",
+  },
+];
+
+function AutomationSection() {
   return (
-    <section className="relative py-32 bg-[#020817] overflow-hidden">
+    <section
+      id="automation"
+      className="relative overflow-hidden bg-[#050816] py-28"
+    >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-blue-500/5" />
 
-      <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+      <div className="absolute inset-0">
 
-        {/* LEFT */}
-<div>
-  <p className="text-cyan-400 uppercase tracking-[6px] text-sm font-medium mb-8">
-    AGENTIC AI
-  </p>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,.08),transparent_45%)]" />
 
-  <h2 className="text-[56px] lg:text-[78px] font-extrabold leading-[0.95] tracking-[-2px]">
-    Workflows That
-    <br />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(59,130,246,.08),transparent_45%)]" />
 
-    <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
-      Think For Themselves
-    </span>
-  </h2>
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-  <p className="mt-10 text-gray-400 text-[22px] leading-[1.7] max-w-2xl">
-    Most automation just fires triggers. Kyntri's agentic platform
-    deploys AI agents that understand context, choose the next best
-    action, and execute across your existing tools — then learn from
-    every run.
-  </p>
-
-  <div className="mt-14 space-y-7">
-
-    <div className="flex items-start gap-5">
-      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
-        <CheckCircle2 size={18} className="text-cyan-400" />
       </div>
 
-      <p className="text-xl leading-8">
-        <span className="font-bold text-white">
-          Connect any stack.
-        </span>{" "}
-        <span className="text-gray-300">
-          CRMs, databases, internal tools, and third-party APIs in one orchestration layer.
-        </span>
-      </p>
-    </div>
+      <div className="relative mx-auto max-w-[1450px] px-10">
 
-    <div className="flex items-start gap-5">
-      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
-        <CheckCircle2 size={18} className="text-cyan-400" />
-      </div>
+        <div className="grid items-start gap-20 lg:grid-cols-[1fr_1fr]">
 
-      <p className="text-xl leading-8">
-        <span className="font-bold text-white">
-          Agents that reason.
-        </span>{" "}
-        <span className="text-gray-300">
-          Multi-step decisions, not brittle if-this-then-that rules.
-        </span>
-      </p>
-    </div>
+          {/* LEFT */}
 
-    <div className="flex items-start gap-5">
-      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
-        <CheckCircle2 size={18} className="text-cyan-400" />
-      </div>
+          <div className="max-w-[720px]">
 
-      <p className="text-xl leading-8">
-        <span className="font-bold text-white">
-          Human-in-the-loop.
-        </span>{" "}
-        <span className="text-gray-300">
-          Approvals and guardrails exactly where they matter.
-        </span>
-      </p>
-    </div>
+            <p className="mb-8 text-xs font-semibold uppercase tracking-[8px] text-cyan-400">
 
-    <div className="flex items-start gap-5">
-      <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-500/10">
-        <CheckCircle2 size={18} className="text-cyan-400" />
-      </div>
+              AGENTIC AI
 
-      <p className="text-xl leading-8">
-        <span className="font-bold text-white">
-          Continuously improving.
-        </span>{" "}
-        <span className="text-gray-300">
-          Every execution sharpens the next.
-        </span>
-      </p>
-    </div>
+            </p>
 
-  </div>
-</div>
-        
+            <h2 className="text-[54px] font-black leading-[0.95] tracking-[-2px] text-white lg:text-[66px]">
 
-        {/* RIGHT */}
-        <div className="relative h-[720px] w-full max-w-[650px] mx-auto flex items-center justify-center overflow-visible">
+              Workflows That
 
-          {/* Glow */}
-          <div className="absolute w-[700px] h-[700px] bg-cyan-500/20 blur-[220px] rounded-full animate-pulse" />
-          <div className="absolute w-[450px] h-[450px] bg-cyan-400/10 blur-[120px] rounded-full animate-ping" />
+              <br />
 
-          {/* Workflow SVG */}
-         <svg
-  className="absolute inset-0 w-full h-full z-5 pointer-events-none"
-  viewBox="0 0 700 700"
+              <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+
+                Think For Themselves
+
+              </span>
+
+            </h2>
+
+            <p className="mt-10 max-w-[680px] text-[20px] leading-10 text-gray-400">
+
+              Most automation just fires triggers.
+
+              Kyntri's agentic platform deploys AI agents that
+
+              understand context, choose the next best action,
+
+              and execute across your existing tools —
+
+              then learn from every run.
+
+            </p>
+
+            <div className="mt-14 space-y-7">
+
+              {FEATURES.map((item) => (
+
+                <div
+                  key={item.title}
+                  className="flex items-start gap-5"
+                >
+
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-500/10">
+
+                    <CheckCircle2
+                      size={18}
+                      className="text-cyan-400"
+                    />
+
+                  </div>
+
+                  <p className="text-lg leading-8">
+
+                    <span className="font-semibold text-white">
+
+                      {item.title}
+
+                    </span>{" "}
+
+                    <span className="text-gray-400">
+
+                      {item.desc}
+
+                    </span>
+
+                  </p>
+
+                </div>
+
+              ))}
+
+            </div>
+
+          </div>
+
+          {/* RIGHT */}
+
+          <div className="relative -mt-5">
+            <div
+  className="
+  max-w-[680px] ml-auto
+    rounded-[30px]
+    border
+    border-white/10
+    bg-[#0b1020]/90
+    backdrop-blur-xl
+    shadow-[0_25px_90px_rgba(0,0,0,.45)]
+    hover:border-cyan-500/30
+    transition-all
+    duration-500
+    overflow-hidden
+  "
 >
-  {/* Analyzing */}
-{/* Analyzing */}
-<path
-  d="M350 120 Q350 220 350 350"
-  className="workflow-line"
-/>
 
-{/* Planning */}
-<path
-  d="M540 170 Q470 240 350 350"
-  className="workflow-line"
-/>
+  {/* Header */}
 
-{/* Insights */}
-<path
-  d="M180 340 Q260 330 350 350"
-  className="workflow-line"
-/>
+  <div className="flex items-center justify-between border-b border-white/10 px-8 py-5">
 
-{/* Decision */}
-<path
-  d="M540 430 Q450 390 350 350"
-  className="workflow-line"
-/>
+    <div className="flex items-center gap-3">
 
-{/* Executing */}
-<path
-  d="M220 560 Q280 460 350 350"
-  className="workflow-line"
-/>
+      <span className="relative flex h-3 w-3">
 
-{/* Learning */}
-<path
-  d="M500 590 Q430 500 350 350"
-  className="workflow-line"
-/>
-</svg>
- {/* Analyzing -> Robot */}
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
 
+        <span className="relative inline-flex h-3 w-3 rounded-full bg-green-400"></span>
 
+      </span>
 
-          {/* Background Text */}
-          <div className="absolute top-4 right-10 text-cyan-500/10 text-[140px] font-bold">
-            AI
+      <span className="text-xs uppercase tracking-[5px] text-gray-400">
+
+        AGENT RUN
+
+      </span>
+
+    </div>
+
+    <span
+      className="
+      rounded-full
+      border
+      border-green-500/20
+      bg-green-500/10
+      px-3
+      py-1
+      text-[11px]
+      tracking-[3px]
+      text-green-400
+      "
+    >
+      LIVE
+    </span>
+
+  </div>
+
+  {/* Timeline */}
+
+  <div className="relative px-8 py-8">
+
+    {/* Vertical Line */}
+
+    <div
+      className="
+      absolute
+      left-[49px]
+      top-12
+      bottom-10
+      w-px
+      bg-gradient-to-b
+      from-cyan-400
+      via-cyan-400/40
+      to-transparent
+      "
+    />
+
+    {/* Trigger */}
+
+    <div className="relative flex gap-5 pb-10">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10">
+
+        <Play className="h-5 w-5 text-cyan-400" />
+
+      </div>
+
+      <div>
+
+        <h4 className="text-lg font-semibold text-white">
+
+          Trigger
+
+        </h4>
+
+        <p className="mt-1 text-gray-400">
+
+          New Lead • CRM
+
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Analyze */}
+
+    <div className="relative flex gap-5 pb-10">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10">
+
+        <Search className="h-5 w-5 text-cyan-400" />
+
+      </div>
+
+      <div>
+
+        <div className="flex items-center gap-2">
+
+          <h4 className="text-lg font-semibold text-white">
+
+            Analyzing
+
+          </h4>
+
+          <div className="flex gap-1">
+
+            <span className="h-2 w-2 rounded-full bg-cyan-400 animate-bounce"></span>
+
+            <span className="h-2 w-2 rounded-full bg-cyan-400 animate-bounce delay-150"></span>
+
+            <span className="h-2 w-2 rounded-full bg-cyan-400 animate-bounce delay-300"></span>
+
           </div>
 
-          <div className="absolute bottom-12 right-8 text-cyan-500/10 text-[80px]">
-            {"{}"}
-          </div>
-
-          <div className="absolute left-2 top-[45%] text-cyan-500/10 text-[70px]">
-            {"</>"}
-          </div>
-
-          <div className="absolute bottom-24 left-8 text-cyan-500/10 text-[70px]">
-            ML
-          </div>
-
-          {/* Cards */}
-
-          <div className="absolute top-[12%] left-[28%] -translate-x-1/2 ai-card glass-card z-30">
-            <Brain size={20} className="text-cyan-400" />
-            <div>
-              <h4>Analyzing</h4>
-              <p>Processing Data</p>
-            </div>
-          </div>
-
-          <div className="absolute top-[12%] left-[75%] ai-card glass-card z-30">
-            <Code2 size={20} className="text-cyan-400" />
-            <div>
-              <h4>Planning</h4>
-              <p>Generating Strategy</p>
-            </div>
-          </div>
-
-          <div className="absolute top-[42%] left-[2%] ai-card glass-card z-30">
-            <BarChart3 size={20} className="text-cyan-400" />
-            <div>
-              <h4>Insights</h4>
-              <p>Pattern Detection</p>
-            </div>
-          </div>
-
-          <div className="absolute top-[55%] left-[92%] ai-card glass-card z-30">
-            <CheckCircle2 size={20} className="text-green-400" />
-            <div>
-              <h4>Decision</h4>
-              <p>Approved</p>
-            </div>
-          </div>
-
-          <div className="absolute bottom-[10%] left-[8%] ai-card glass-card z-30">
-            <Zap size={20} className="text-yellow-400" />
-            <div>
-              <h4>Executing</h4>
-              <p>Running Workflow</p>
-            </div>
-          </div>
-
-          <div className="absolute bottom-[8%] right-[8%] ai-card glass-card z-30">
-            <RefreshCw size={20} className="text-cyan-400" />
-            <div>
-              <h4>Learning</h4>
-              <p>Improving Results</p>
-            </div>
-          </div>
-
-
-          {/* Robot */}
-          <img
-            src={robot}
-            alt="AI Robot"
-            className="
-              w-[420px]
-              lg:w-[480px]
-              xl:w-[520px]
-              relative
-              z-20
-              object-contain
-              animate-float
-              drop-shadow-[0_0_120px_rgba(0,255,255,0.4)]
-            "
-          />
         </div>
-        {/* AI Models Strip */}
-<div className="lg:col-span-2 mt-20">
-  <div className="border border-white/10 rounded-xl bg-white/[0.02] px-5 py-4">
-    
-    <p className="text-center text-[10px] tracking-[5px] uppercase text-gray-500 mb-3">
-      Model Agnostic — The Right Model For Each Task
-    </p>
 
-    <div className="flex flex-wrap justify-center gap-4">
-      {["OpenAI", "Anthropic", "Gemini", "Perplexity"].map((model) => (
-        <div
-          key={model}
-          className="
-            px-4 py-1
-            rounded-xl
-            border border-cyan-500/20
-            bg-cyan-500/5
-            hover:bg-cyan-500/10
-            hover:border-cyan-500/40
-            transition-all
-            duration-300
-            text-white
-            font-medium
-          "
-        >
-          {model}
+        <p className="mt-1 text-gray-400">
+
+          Reasoning over context
+
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Decision */}
+
+    <div className="relative flex gap-5 pb-10">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-green-500/30 bg-green-500/10">
+
+        <CheckCircle2 className="h-5 w-5 text-green-400" />
+
+      </div>
+
+      <div>
+
+        <h4 className="text-lg font-semibold text-white">
+
+          Decision
+
+        </h4>
+
+        <p className="mt-1 text-green-400">
+
+          Approved • Confidence 0.94
+
+        </p>
+
+      </div>
+
+    </div>
+        {/* Connecting Tools */}
+
+    <div className="relative flex gap-5 pb-10">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10">
+
+        <Link2 className="h-5 w-5 text-cyan-400" />
+
+      </div>
+
+      <div className="flex-1">
+
+        <h4 className="text-lg font-semibold text-white">
+          Connecting Tools
+        </h4>
+
+        <div className="mt-3 flex flex-wrap gap-2">
+
+          {["Slack", "CRM", "Database"].map((tool) => (
+
+            <span
+              key={tool}
+              className="
+              rounded-lg
+              border
+              border-cyan-500/20
+              bg-cyan-500/5
+              px-3
+              py-1
+              text-sm
+              text-cyan-300
+              "
+            >
+              {tool}
+            </span>
+
+          ))}
+
         </div>
-      ))}
+
+      </div>
+
+    </div>
+
+    {/* Executing */}
+
+    <div className="relative flex gap-5">
+
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10">
+
+        <Zap className="h-5 w-5 text-cyan-400" />
+
+      </div>
+
+      <div>
+
+        <h4 className="text-lg font-semibold text-white">
+          Executing
+        </h4>
+
+        <p className="mt-1 text-gray-400">
+          Sync → CRM
+        </p>
+
+      </div>
+
     </div>
 
   </div>
+
 </div>
-      </div>
-    </section>
-    
+
+{/* AI Models */}
+
+<div
+  className="
+  mt-8
+  rounded-2xl
+  border
+  border-white/10
+  bg-white/[0.03]
+  p-6
+  backdrop-blur
+  "
+>
+
+  <p
+    className="
+    mb-5
+    text-center
+    text-[11px]
+    uppercase
+    tracking-[6px]
+    text-gray-500
+    "
+  >
+    Model Agnostic — The Right Model For Each Task
+  </p>
+
+  <div className="flex flex-wrap justify-center gap-3">
+
+    {[
+      "OpenAI",
+      "Anthropic",
+      "Gemini",
+      "Perplexity",
+    ].map((model) => (
+
+      <span
+        key={model}
+        className="
+        rounded-xl
+        border
+        border-cyan-500/20
+        bg-cyan-500/5
+        px-5
+        py-2
+        text-sm
+        font-medium
+        text-white
+        transition-all
+        duration-300
+        hover:scale-105
+        hover:border-cyan-400
+        hover:bg-cyan-500/10
+        "
+      >
+        {model}
+      </span>
+
+    ))}
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
   );
-  
 }
 
-export default AgenticAI;
-
+export default AutomationSection;
