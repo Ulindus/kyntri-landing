@@ -78,14 +78,20 @@ const cards = [
 
 function KpiCards() {
   return (
-    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-
+    <div
+      className="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        xl:grid-cols-4
+        gap-4
+        sm:gap-5
+      "
+    >
       {cards.map((card) => {
-
         const Icon = card.icon;
 
         return (
-
           <div
             key={card.title}
             className="
@@ -93,7 +99,8 @@ function KpiCards() {
               border
               border-white/10
               bg-[#0B1220]
-              p-6
+              p-5
+              sm:p-6
               transition-all
               duration-300
               hover:-translate-y-1
@@ -101,27 +108,26 @@ function KpiCards() {
               hover:shadow-[0_0_30px_rgba(34,211,238,.12)]
             "
           >
-
             {/* Icon */}
 
             <div
               className={`
-                mb-5
+                mb-4
                 flex
-                h-12
-                w-12
+                h-11
+                w-11
+                sm:h-12
+                sm:w-12
                 items-center
                 justify-center
                 rounded-xl
                 ${card.bg}
               `}
             >
-
               <Icon
-                size={22}
+                size={20}
                 className={card.color}
               />
-
             </div>
 
             {/* Title */}
@@ -132,30 +138,33 @@ function KpiCards() {
 
             {/* Value */}
 
-            <h3 className="mt-2 text-3xl font-bold text-white">
+            <h3
+              className="
+                mt-2
+                text-2xl
+                sm:text-3xl
+                font-bold
+                text-white
+                break-words
+              "
+            >
               {card.value}
             </h3>
 
             {/* Growth */}
 
-            <div className="mt-5 flex items-center gap-2">
-
+            <div className="mt-4 flex flex-wrap items-center gap-2">
               <span className={`${card.color} font-semibold`}>
                 {card.change}
               </span>
 
-              <span className="text-sm text-gray-500">
+              <span className="text-xs sm:text-sm text-gray-500">
                 vs last week
               </span>
-
             </div>
-
           </div>
-
         );
-
       })}
-
     </div>
   );
 }

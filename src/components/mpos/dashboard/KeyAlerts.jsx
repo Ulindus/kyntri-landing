@@ -55,46 +55,51 @@ const alerts = [
 
 function KeyAlerts() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-6">
-
+    <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-5 sm:p-6">
       {/* Header */}
 
-      <div className="mb-6 flex items-center justify-between">
-
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-
-          <h3 className="text-xl font-bold text-white">
+          <h3 className="text-lg font-bold text-white sm:text-xl">
             Key Alerts
           </h3>
 
           <p className="mt-1 text-sm text-gray-400">
             Important business notifications
           </p>
-
         </div>
 
-        <span className="rounded-full bg-red-500/20 px-3 py-1 text-sm font-semibold text-red-400">
+        <span className="w-fit rounded-full bg-red-500/20 px-3 py-1 text-sm font-semibold text-red-400">
           {alerts.length} Alerts
         </span>
-
       </div>
 
       {/* Alert List */}
 
       <div className="space-y-4">
-
         {alerts.map((alert) => {
           const Icon = alert.icon;
 
           return (
             <div
               key={alert.id}
-              className="rounded-xl border border-white/5 bg-[#111827] p-4 transition-all duration-300 hover:border-cyan-500/30 hover:bg-[#162032]"
+              className="
+                rounded-xl
+                border
+                border-white/5
+                bg-[#111827]
+                p-4
+                transition-all
+                duration-300
+                hover:border-cyan-500/30
+                hover:bg-[#162032]
+              "
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row">
+                {/* Icon */}
 
                 <div
-                  className={`flex h-11 w-11 items-center justify-center rounded-xl ${alert.bg}`}
+                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${alert.bg}`}
                 >
                   <Icon
                     size={20}
@@ -102,69 +107,75 @@ function KeyAlerts() {
                   />
                 </div>
 
-                <div className="flex-1">
+                {/* Content */}
 
-                  <div className="flex items-center justify-between">
-
-                    <h4 className="font-semibold text-white">
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <h4 className="break-words font-semibold text-white">
                       {alert.title}
                     </h4>
 
                     <span
-                      className={`rounded-full px-3 py-1 text-xs font-semibold ${alert.badge}`}
+                      className={`w-fit rounded-full px-3 py-1 text-xs font-semibold ${alert.badge}`}
                     >
                       {alert.severity}
                     </span>
-
                   </div>
 
-                  <p className="mt-2 text-sm leading-6 text-gray-400">
+                  <p className="mt-3 text-sm leading-6 text-gray-400">
                     {alert.message}
                   </p>
 
-                  <div className="mt-4 flex items-center justify-between">
-
+                  <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <span className="text-xs text-gray-500">
                       {alert.time}
                     </span>
 
                     <button className="flex items-center gap-1 text-sm font-medium text-cyan-400 transition hover:text-cyan-300">
                       View
+
                       <ChevronRight size={16} />
                     </button>
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
           );
         })}
-
       </div>
 
-      {/* Footer */}
+      {/* Summary */}
 
-      <button
-        className="
-          mt-6
-          w-full
-          rounded-xl
-          border
-          border-cyan-500/20
-          bg-cyan-500/10
-          py-3
-          font-semibold
-          text-cyan-400
-          transition
-          hover:bg-cyan-500/20
-        "
-      >
-        View All Notifications
-      </button>
+      <div className="mt-6 rounded-xl border border-red-500/20 bg-red-500/5 p-4">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm text-gray-300">
+              Active Critical Alerts
+            </p>
 
+            <h4 className="mt-2 text-2xl font-bold text-white">
+              1 High Priority
+            </h4>
+          </div>
+
+          <button
+            className="
+              w-full
+              rounded-xl
+              bg-cyan-500
+              px-5
+              py-3
+              font-semibold
+              text-white
+              transition
+              hover:bg-cyan-600
+              sm:w-auto
+            "
+          >
+            View All Notifications
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

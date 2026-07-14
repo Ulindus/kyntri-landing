@@ -8,7 +8,7 @@ const icons = {
   software: Code2,
 };
 
-function FloatingCard({ type, title, description, className }) {
+function FloatingCard({ type, title, description, className = "" }) {
   const Icon = icons[type];
 
   return (
@@ -16,40 +16,52 @@ function FloatingCard({ type, title, description, className }) {
       className={`
         absolute
         z-30
+        flex
+        items-center
+        gap-3
+        rounded-2xl
+        border
+        border-cyan-500/15
         bg-[#0f172a]/90
         backdrop-blur-xl
-        border border-cyan-500/15
-        rounded-2xl
-        px-4 py-3
-        flex items-center gap-3
+        px-4
+        py-3
         shadow-[0_0_20px_rgba(0,255,255,0.08)]
-        hover:scale-105
         transition-all
         duration-300
+        hover:-translate-y-1
+        hover:scale-105
+        hover:border-cyan-400/40
+        min-w-[210px]
+        max-w-[240px]
         ${className}
       `}
     >
       {/* Icon */}
       <div
         className="
-          w-10 h-10
-          rounded-xl
-          border border-cyan-500/30
-          bg-cyan-500/10
-          flex items-center justify-center
+          flex
+          h-10
+          w-10
           shrink-0
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-cyan-500/30
+          bg-cyan-500/10
         "
       >
-        <Icon size={18} className="text-cyan-400" />
+        {Icon && <Icon size={18} className="text-cyan-400" />}
       </div>
 
       {/* Text */}
-      <div>
-        <h4 className="text-white font-semibold text-base leading-none">
+      <div className="min-w-0">
+        <h4 className="truncate text-sm font-semibold text-white sm:text-base">
           {title}
         </h4>
 
-        <p className="text-gray-400 text-xs mt-1">
+        <p className="mt-1 text-xs leading-relaxed text-gray-400">
           {description}
         </p>
       </div>

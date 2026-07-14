@@ -58,45 +58,35 @@ const badge = {
 
 function RecommendedActions() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-6">
-
+    <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-5 sm:p-6">
       {/* Header */}
 
-      <div className="mb-6 flex items-center justify-between">
-
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-
-          <h3 className="text-xl font-bold text-white">
+          <h3 className="text-lg font-bold text-white sm:text-xl">
             Recommended Actions
           </h3>
 
           <p className="mt-1 text-sm text-gray-400">
             AI generated recommendations
           </p>
-
         </div>
 
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10">
-
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10">
           <CheckCircle2
             className="text-cyan-400"
             size={22}
           />
-
         </div>
-
       </div>
 
-      {/* Actions */}
+      {/* Action Cards */}
 
       <div className="space-y-4">
-
         {actions.map((item) => {
-
           const Icon = item.icon;
 
           return (
-
             <div
               key={item.id}
               className="
@@ -111,117 +101,103 @@ function RecommendedActions() {
                 hover:bg-[#162032]
               "
             >
-
-              <div className="flex gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row">
+                {/* Icon */}
 
                 <div
-                  className={`flex h-11 w-11 items-center justify-center rounded-xl ${item.bg}`}
+                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${item.bg}`}
                 >
-
                   <Icon
                     size={20}
                     className={item.color}
                   />
-
                 </div>
 
-                <div className="flex-1">
+                {/* Content */}
 
-                  <div className="flex items-center justify-between">
-
-                    <h4 className="font-semibold text-white">
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <h4 className="break-words font-semibold text-white">
                       {item.title}
                     </h4>
 
                     <span
-                      className={`rounded-full px-3 py-1 text-xs font-semibold ${badge[item.priority]}`}
+                      className={`w-fit rounded-full px-3 py-1 text-xs font-semibold ${badge[item.priority]}`}
                     >
                       {item.priority}
                     </span>
-
                   </div>
 
-                  <p className="mt-2 text-sm leading-6 text-gray-400">
+                  <p className="mt-3 text-sm leading-6 text-gray-400">
                     {item.description}
                   </p>
 
-                  <div className="mt-4 flex items-center justify-between">
+                  {/* Buttons */}
 
+                  <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       className="
+                        w-full
                         rounded-lg
                         bg-cyan-500
                         px-4
-                        py-2
+                        py-2.5
                         text-sm
                         font-semibold
                         text-white
                         transition
                         hover:bg-cyan-600
+                        sm:w-auto
                       "
                     >
                       {item.button}
                     </button>
 
-                    <button className="flex items-center gap-1 text-sm text-cyan-400 hover:text-cyan-300">
-
+                    <button className="flex items-center gap-1 text-sm text-cyan-400 transition hover:text-cyan-300">
                       Details
 
                       <ArrowRight size={16} />
-
                     </button>
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
-
           );
-
         })}
-
       </div>
 
       {/* Summary */}
 
-      <div className="mt-6 rounded-xl border border-cyan-500/20 bg-cyan-500/10 p-4">
-
-        <div className="flex items-center justify-between">
-
+      <div className="mt-6 rounded-xl border border-cyan-500/20 bg-cyan-500/10 p-5">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
-
             <p className="text-sm text-gray-300">
               Estimated Revenue Impact
             </p>
 
-            <h4 className="mt-2 text-2xl font-bold text-white">
+            <h4 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
               +LKR 485K
             </h4>
-
           </div>
 
           <button
             className="
+              w-full
               rounded-xl
               bg-cyan-500
-              px-5
+              px-6
               py-3
               font-semibold
               text-white
               transition
               hover:bg-cyan-600
+              sm:w-auto
             "
           >
             Apply All
           </button>
-
         </div>
-
       </div>
-
     </div>
   );
 }

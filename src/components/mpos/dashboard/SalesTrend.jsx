@@ -20,44 +20,45 @@ const data = [
 
 function SalesTrend() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-6">
+    <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-5 sm:p-6">
+      {/* Header */}
 
-      <div className="mb-6 flex items-center justify-between">
-
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-
-          <h3 className="text-xl font-semibold text-white">
+          <h3 className="text-lg font-semibold text-white sm:text-xl">
             Sales Trend
           </h3>
 
           <p className="mt-1 text-sm text-gray-400">
             Revenue vs Gross Profit
           </p>
-
         </div>
 
-        <div className="flex rounded-xl bg-[#111827] p-1">
-
-          <button className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-medium text-white">
+        <div className="flex w-full rounded-xl bg-[#111827] p-1 sm:w-auto">
+          <button className="flex-1 rounded-lg bg-cyan-500 px-4 py-2 text-sm font-medium text-white sm:flex-none">
             Revenue
           </button>
 
-          <button className="px-4 py-2 text-sm text-gray-400">
+          <button className="flex-1 px-4 py-2 text-sm text-gray-400 sm:flex-none">
             Profit
           </button>
-
         </div>
-
       </div>
 
-      <div className="h-[320px]">
+      {/* Chart */}
 
+      <div className="h-[260px] sm:h-[320px] lg:h-[360px]">
         <ResponsiveContainer width="100%" height="100%">
-
-          <AreaChart data={data}>
-
+          <AreaChart
+            data={data}
+            margin={{
+              top: 10,
+              right: 10,
+              left: -20,
+              bottom: 0,
+            }}
+          >
             <defs>
-
               <linearGradient
                 id="salesGradient"
                 x1="0"
@@ -65,19 +66,16 @@ function SalesTrend() {
                 x2="0"
                 y2="1"
               >
-
                 <stop
                   offset="0%"
                   stopColor="#22D3EE"
                   stopOpacity={0.35}
                 />
-
                 <stop
                   offset="100%"
                   stopColor="#22D3EE"
                   stopOpacity={0}
                 />
-
               </linearGradient>
 
               <linearGradient
@@ -87,21 +85,17 @@ function SalesTrend() {
                 x2="0"
                 y2="1"
               >
-
                 <stop
                   offset="0%"
                   stopColor="#8B5CF6"
                   stopOpacity={0.25}
                 />
-
                 <stop
                   offset="100%"
                   stopColor="#8B5CF6"
                   stopOpacity={0}
                 />
-
               </linearGradient>
-
             </defs>
 
             <CartesianGrid
@@ -112,10 +106,17 @@ function SalesTrend() {
             <XAxis
               dataKey="month"
               stroke="#94A3B8"
+              tick={{ fontSize: 12 }}
+              tickLine={false}
+              axisLine={false}
             />
 
             <YAxis
               stroke="#94A3B8"
+              tick={{ fontSize: 11 }}
+              tickLine={false}
+              axisLine={false}
+              width={42}
             />
 
             <Tooltip
@@ -131,7 +132,7 @@ function SalesTrend() {
               type="monotone"
               dataKey="revenue"
               stroke="#22D3EE"
-              strokeWidth={4}
+              strokeWidth={3}
               fill="url(#salesGradient)"
             />
 
@@ -139,16 +140,12 @@ function SalesTrend() {
               type="monotone"
               dataKey="profit"
               stroke="#8B5CF6"
-              strokeWidth={4}
+              strokeWidth={3}
               fill="url(#profitGradient)"
             />
-
           </AreaChart>
-
         </ResponsiveContainer>
-
       </div>
-
     </div>
   );
 }

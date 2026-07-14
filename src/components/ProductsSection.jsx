@@ -3,31 +3,64 @@ import { products } from "../data/products";
 
 function ProductsSection() {
   return (
-    <section className="bg-[#0f1420] py-32">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="bg-[#0f1420] py-16 sm:py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
-          <p className="text-cyan-400 uppercase tracking-[4px] text-sm mb-4">
+
+        <div className="mx-auto mb-14 max-w-4xl text-center lg:mb-20">
+
+          <p className="mb-4 text-xs sm:text-sm uppercase tracking-[3px] sm:tracking-[4px] text-cyan-400">
             OUR PLATFORMS
           </p>
 
-          <h2 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+          <h2
+            className="
+            mb-6
+            font-bold
+            leading-tight
+            text-4xl
+            sm:text-5xl
+            lg:text-7xl
+          "
+          >
             Products We've
+
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               {" "}Built & Shipped
             </span>
+
           </h2>
 
-          <p className="text-gray-400 text-lg leading-8 max-w-3xl mx-auto">
-            Beyond client work, we build and operate our own platforms — real
-            products solving real operational problems across retail, events,
-            automotive, and AI.
+          <p
+            className="
+            mx-auto
+            max-w-3xl
+            text-base
+            sm:text-lg
+            leading-7
+            sm:leading-8
+            text-gray-400
+          "
+          >
+            Beyond client work, we build and operate our own platforms —
+            real products solving real operational problems across retail,
+            events, automotive, and AI.
           </p>
+
         </div>
 
         {/* Product Cards */}
-        <div className="grid md:grid-cols-2 gap-10">
+
+        <div
+          className="
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          gap-6
+          lg:gap-10
+        "
+        >
           {products.map((product) => (
             <ProductCard
               key={product.title}

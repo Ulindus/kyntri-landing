@@ -4,22 +4,25 @@ function ServiceCard({ service }) {
   return (
     <div
       className="
+      group
       relative
       overflow-hidden
+      rounded-3xl
+      border
+      border-[#12253d]
       bg-gradient-to-b
       from-[#091426]
       to-[#07111f]
-      border
-      border-[#12253d]
-      rounded-3xl
-      p-10
-      min-h-[420px]
-      hover:-translate-y-3
-      hover:border-cyan-400/60
-      hover:shadow-[0_0_50px_rgba(0,255,255,0.15)]
+      p-6
+      sm:p-8
+      lg:p-10
+      min-h-[360px]
+      lg:min-h-[420px]
       transition-all
       duration-500
-      group
+      hover:-translate-y-2
+      hover:border-cyan-400/60
+      hover:shadow-[0_0_50px_rgba(0,255,255,0.15)]
       "
     >
       {/* Animated Top Line */}
@@ -28,46 +31,47 @@ function ServiceCard({ service }) {
         absolute
         top-0
         left-[-100%]
-        w-full
         h-[2px]
+        w-full
         bg-gradient-to-r
         from-transparent
         via-cyan-400
         to-transparent
-        group-hover:left-[100%]
         transition-all
         duration-1000
+        group-hover:left-[100%]
         "
       />
 
-      {/* Glow Overlay */}
+      {/* Glow */}
       <div
         className="
         absolute
         inset-0
         opacity-0
+        transition-all
+        duration-500
         group-hover:opacity-100
         bg-gradient-to-br
         from-cyan-500/5
         via-transparent
         to-blue-500/5
-        transition-all
-        duration-500
         "
       />
 
-      {/* Service Number */}
+      {/* Number */}
       <span
         className="
         absolute
-        top-6
-        right-6
-        text-cyan-500/20
-        text-5xl
+        right-5
+        top-5
+        text-4xl
+        lg:text-5xl
         font-light
-        group-hover:text-cyan-400/40
+        text-cyan-500/20
         transition-all
         duration-500
+        group-hover:text-cyan-400/40
         "
       >
         {service.id}
@@ -78,33 +82,35 @@ function ServiceCard({ service }) {
         className="
         relative
         z-10
-        w-16
-        h-16
+        mb-6
+        flex
+        h-14
+        w-14
+        sm:h-16
+        sm:w-16
+        items-center
+        justify-center
         rounded-2xl
         border
         border-cyan-500/20
         bg-cyan-500/5
-        flex
-        items-center
-        justify-center
-        mb-8
         shadow-[0_0_20px_rgba(0,255,255,0.08)]
+        transition-all
+        duration-500
         group-hover:scale-110
         group-hover:bg-cyan-500/10
         group-hover:shadow-[0_0_35px_rgba(0,255,255,0.35)]
-        transition-all
-        duration-500
-        "
+      "
       >
         <Icon
-          size={30}
+          size={26}
           className="
           text-cyan-400
-          drop-shadow-[0_0_10px_#00ffff]
-          group-hover:rotate-12
           transition-all
           duration-500
-          "
+          group-hover:rotate-12
+          drop-shadow-[0_0_10px_#00ffff]
+        "
         />
       </div>
 
@@ -113,11 +119,12 @@ function ServiceCard({ service }) {
         className="
         relative
         z-10
-        text-3xl
+        mb-4
+        text-2xl
+        sm:text-3xl
         font-bold
         text-white
-        mb-6
-        "
+      "
       >
         {service.title}
       </h3>
@@ -127,36 +134,39 @@ function ServiceCard({ service }) {
         className="
         relative
         z-10
-        text-gray-400
-        leading-8
         mb-8
-        "
+        text-sm
+        sm:text-base
+        leading-7
+        text-gray-400
+      "
       >
         {service.description}
       </p>
 
       {/* Technologies */}
-      <div className="relative z-10 flex flex-wrap gap-3">
+      <div className="relative z-10 flex flex-wrap gap-2 sm:gap-3">
         {service.technologies.map((tech) => (
           <span
             key={tech}
             className="
-            px-4
-            py-2
             rounded-xl
             border
             border-cyan-500/20
             bg-cyan-500/5
-            text-cyan-300
-            text-xs
+            px-3
+            py-2
+            text-[11px]
+            sm:px-4
+            sm:text-xs
             font-medium
+            text-cyan-300
+            transition-all
+            duration-300
             hover:bg-cyan-500
             hover:text-black
             hover:shadow-[0_0_20px_rgba(0,255,255,0.3)]
-            transition-all
-            duration-300
-            cursor-pointer
-            "
+          "
           >
             {tech}
           </span>
@@ -169,16 +179,16 @@ function ServiceCard({ service }) {
         absolute
         bottom-0
         left-0
-        w-full
         h-24
+        w-full
         bg-gradient-to-t
         from-cyan-500/5
         to-transparent
         opacity-0
-        group-hover:opacity-100
         transition-all
         duration-500
-        "
+        group-hover:opacity-100
+      "
       />
     </div>
   );
