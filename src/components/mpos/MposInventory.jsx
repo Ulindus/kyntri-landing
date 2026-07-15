@@ -35,15 +35,15 @@ const inventory = [
 
 function MposInventory() {
   return (
-    <section className="relative overflow-hidden bg-[#020817] py-32">
+    <section className="relative overflow-hidden bg-[#020817] py-16 lg:py-20">
 
       {/* Glow */}
       <div className="absolute -left-20 top-20 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[180px]" />
       <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[180px]" />
 
-      <div className="relative mx-auto max-w-[1450px] px-8">
+      <div className="relative mx-auto max-w-[1450px] px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid items-center gap-10 lg:grid-cols-2 xl:gap-16">
 
           {/* LEFT */}
 
@@ -55,7 +55,7 @@ function MposInventory() {
 
             </span>
 
-            <h2 className="mt-5 text-5xl font-black text-white">
+            <h2 className="mt-4 text-4xl font-extrabold text-white lg:text-5xl">
 
               Inventory Management
               <br />
@@ -63,7 +63,7 @@ function MposInventory() {
 
             </h2>
 
-            <p className="mt-8 text-lg leading-9 text-gray-400 max-w-xl">
+            <p className="mt-5 max-w-lg text-lg leading-8 text-gray-400">
 
               Track stock levels, suppliers, purchase orders,
               product performance and warehouse activities
@@ -73,7 +73,7 @@ function MposInventory() {
 
             <button
               className="
-              mt-12
+              mt-8
               flex
               items-center
               gap-2
@@ -97,7 +97,7 @@ function MposInventory() {
 
           {/* RIGHT */}
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-5">
 
             {inventory.map((item) => {
 
@@ -112,7 +112,7 @@ function MposInventory() {
                   border
                   border-white/10
                   bg-[#0B1120]
-                  p-8
+                  p-7
                   backdrop-blur-xl
                   transition-all
                   duration-500
@@ -138,7 +138,7 @@ function MposInventory() {
                     />
                   </div>
 
-                  <h3 className="mt-8 text-4xl font-bold text-white">
+                  <h3 className="mt-6 text-3xl font-bold text-white lg:text-4xl">
 
                     {item.value}
 

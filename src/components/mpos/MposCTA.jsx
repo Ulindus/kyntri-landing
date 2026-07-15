@@ -6,7 +6,7 @@ import {
 
 function MposCTA() {
   return (
-    <section className="relative overflow-hidden bg-[#020817] py-32">
+    <section className="relative overflow-hidden bg-[#020817] pt-10 pb-20 lg:pt-14 lg:pb-24">
 
       {/* Background Glow */}
 

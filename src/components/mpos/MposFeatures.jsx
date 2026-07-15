@@ -90,7 +90,7 @@ const features = [
 
 function MposFeatures() {
   return (
-    <section className="relative bg-[#020817] py-28 overflow-hidden">
+    <section className="relative overflow-hidden bg-[#020817] py-16 lg:py-20">
 
       {/* Glow */}
 

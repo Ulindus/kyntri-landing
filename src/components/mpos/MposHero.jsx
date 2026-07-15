@@ -3,7 +3,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 function MposHero() {
   return (
-    <section className="relative overflow-hidden bg-[#020817] pt-32 pb-24">
+    <section className="relative overflow-hidden bg-[#020817] pt-32 pb-14">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute -top-40 left-0 h-[650px] w-[650px] rounded-full bg-cyan-500/10 blur-[180px]" />
