@@ -2,7 +2,8 @@ import Navbar from "../components/mpos/Navbar";
 
 import MposHero from "../components/mpos/MposHero";
 import MposFeatures from "../components/mpos/MposFeatures";
-import MposAnalytics from "../components/mpos/MposAnalytics";
+
+import BusinessInsights from "../components/mpos/BusinessInsights";
 import MposInventory from "../components/mpos/MposInventory";
 import MposOperations from "../components/mpos/MposOperations";
 import MposCTA from "../components/mpos/MposCTA";
@@ -15,7 +16,8 @@ function MposPage() {
 
       <MposHero />
       <MposFeatures />
-      <MposAnalytics />
+      
+      <BusinessInsights />
       <MposInventory />
       <MposOperations />
       <MposCTA />

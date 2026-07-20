@@ -1,4 +1,4 @@
-import Dashboard from "./dashboard/Dashboard";
+
 
 function MposAnalytics() {
   return (
@@ -21,7 +21,7 @@ function MposAnalytics() {
           </p>
         </div>
 
-        <Dashboard />
+        
 
       </div>
     </section>
